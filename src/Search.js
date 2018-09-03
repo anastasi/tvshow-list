@@ -1,16 +1,28 @@
 import React, { Component } from 'react';
 
  class Search extends Component {
-   state = {
-    query:''
+   constructor() {
+     super()
+     this.state = {
+      query: '',
+      shows: [] 
+     }
    }
-
-  handleInputChange = () => {
+  
+  handleInputChange = () => { 
     this.setState({
       query: this.search.value
     })
+    const single_show = `http://api.tvmaze.com/search/shows?q=${this.state.query}`
+    
+    fetch(single_show)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ shows: data })
+      })
   }
   render() {
+    const { shows } = this.state;
     return(
         <div>
           <h1>Search</h1>
@@ -22,7 +34,17 @@ import React, { Component } from 'react';
                       onChange={this.handleInputChange}/>
             </div>
           </form>
-          <p>{this.state.query}</p>
+
+          {this.state.shows.length > 0 &&
+            <ul>
+              {shows.map(item =>
+                <li key={item.show.id}>
+                  <p>{item.show.name}</p>
+                </li>
+              )}
+            </ul>
+            }
+          
         </div>
     )
   }
