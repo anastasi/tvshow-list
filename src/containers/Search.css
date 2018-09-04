@@ -1,10 +1,10 @@
-.ShowCard .ShowButton{
+.ShowCard .PlayButton{
   background-color: red;
 }
-.ShowCard .ShowButton:hover{
+.ShowCard .PlayButton:hover{
   background-color: #d40e00;
 }
-.ShowCard .ShowButton:active{
+.ShowCard .PlayButton:active{
   background-color: #ff584c;
 }
 .ShowCard .PlayIcon{
