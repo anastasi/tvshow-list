@@ -39,7 +39,9 @@ import React, { Component } from 'react';
             <ul>
               {shows.map(item =>
                 <li key={item.show.id}>
-                  <p>{item.show.name}</p>
+                  <h3>{item.show.name}</h3>
+                  <p>{item.show.summary}</p>
+                  <img src={item.show.image.medium} />
                 </li>
               )}
             </ul>
