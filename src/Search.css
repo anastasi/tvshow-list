@@ -1,0 +1,26 @@
+.ShowCard .ShowButton{
+  background-color: red;
+}
+.ShowCard .ShowButton:hover{
+  background-color: #d40e00;
+}
+.ShowCard .ShowButton:active{
+  background-color: #ff584c;
+}
+.ShowCard .PlayIcon{
+  margin-left: 8px;
+}
+.ShowCard .ShowSummarySmall{
+  margin-bottom: 30px;
+}
+.read-more-button{
+  cursor: pointer;
+  color: #737386;
+  text-align: right;
+  text-decoration: underline;
+  
+}
+.display-text-group{
+  font-size: 17px;
+  text-align: justify;
+}
