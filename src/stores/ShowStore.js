@@ -1,8 +1,19 @@
-import { observable, action, computed } from 'mobx';
+import { observable, action } from 'mobx';
 
 class ShowStore {
-  // to be implemented later on
+  @observable shows = [];
+
+  @action
+  searchShow = show => {
+    const search_query = `http://api.tvmaze.com/search/shows?q=${show}`
+    fetch(search_query)
+    .then(response => response.json())
+    .then(data => {
+      this.shows = data
+      console.log('DATA',data)
+    })
+  }
 }
 
-const singleton = new ShowStore();
-export default singleton;
+const store = new ShowStore();
+export default store;
