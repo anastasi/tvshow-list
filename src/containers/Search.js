@@ -23,7 +23,6 @@ import { inject, observer } from 'mobx-react'
     console.log('ITEM',this.state.query)
   }
   render() {
-    const { shows } = this.state;
     return(
         <div className="container">
           <h1>Search</h1>

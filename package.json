@@ -15,6 +15,7 @@
     "react-app-rewired": "^1.6.2",
     "react-dom": "^16.4.2",
     "react-materialize": "^2.4.5",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
     "read-more-react": "^1.0.6",
     "styled-components": "^3.4.5"
