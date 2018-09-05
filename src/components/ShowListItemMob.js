@@ -8,14 +8,15 @@ const ShowListItemMob = (props) => (
     header={ props.image === null ? (<CardTitle reveal image='/images/no-image.png' waves='light'/>) : (<CardTitle reveal image={props.image.medium} waves='light' />)
   } 
     title={props.title}
-    reveal={<p className="ShowSummarySmall">
-    <ReadMoreReact text={props.text.replace(/<[^>]+>/g, '')}
+    reveal={<div className="ShowSummarySmall">
+    { props.text === null ? "" : (<ReadMoreReact text={props.text.replace(/<[^>]+>/g, '')}
       min={80}
       ideal={200}
-      max={300}/>
+      max={300}/>)
+    }
     <Col s={12}>
       <PlayButton class="PlayButton"/>
-    </Col></p>}>
+    </Col></div>}>
   </Card>
 )
 

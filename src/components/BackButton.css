@@ -1,0 +1,15 @@
+.BackButton{
+  color: black;
+  cursor: pointer;
+  float: left;
+}
+.BackButton .BackBtnText{
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.BackButton i{
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}

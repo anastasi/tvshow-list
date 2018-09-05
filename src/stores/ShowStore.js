@@ -22,7 +22,6 @@ class ShowStore {
      .then(response => response.json())
      .then(data => {
        this.episodes = data
-       console.log('DATA',data)
      })
   }
 }

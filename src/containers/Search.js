@@ -15,12 +15,11 @@ import { inject, observer } from 'mobx-react'
      }
    }
   
-  handleInputChange = () => { 
+  handleInputChange = () => {
     this.setState({
       query: this.search.value
     })
-    this.props.ShowStore.searchShow(this.state.query)
-    console.log('ITEM',this.state.query)
+    this.props.ShowStore.searchShow(this.search.value)
   }
   render() {
     return(
