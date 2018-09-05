@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, CardTitle, Col } from 'react-materialize'
 import ReadMoreReact from 'read-more-react'
+import { Link } from 'react-router-dom'
 import PlayButton from '../components/PlayButton'
 
 const ShowListItemMob = (props) => (
@@ -15,7 +16,9 @@ const ShowListItemMob = (props) => (
       max={300}/>)
     }
     <Col s={12}>
-      <PlayButton class="PlayButton"/>
+      <Link key={`show-episodes-${props.showId}`} to={{ pathname: `/show/${props.showId}`}}>
+        <PlayButton class="PlayButton"/>
+      </Link>
     </Col></div>}>
   </Card>
 )

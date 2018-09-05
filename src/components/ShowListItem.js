@@ -22,7 +22,8 @@ const ShowListItem = (props) => (
       
       <ShowListItemMob image={props.item.image}
         title={props.item.name}
-        text={props.item.summary}/>
+        text={props.item.summary}
+        showId={props.item.id}/>
     </Col>
   </Row>
     
