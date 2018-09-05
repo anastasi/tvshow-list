@@ -8,7 +8,8 @@ const ShowListItem = (props) => (
   <Row>
     <Col l={12} s={12}>
       <Card className="ShowCard hide-on-small-only" horizontal 
-        header={<CardTitle image={props.item.image.medium}></CardTitle>} 
+        header={ props.item.image === null ? (<CardTitle className="NoImage" image='/images/no-image.png'></CardTitle>) : (<CardTitle image={props.item.image.medium}></CardTitle>)
+        } 
         actions={[<PlayButton class="right PlayButton" />]}>
         <h5>{props.item.name}</h5>
         <ReadMoreReact  text={props.item.summary.replace(/<[^>]+>/g, '')}
@@ -25,3 +26,4 @@ const ShowListItem = (props) => (
 )
 
 export default ShowListItem
+

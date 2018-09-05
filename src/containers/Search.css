@@ -13,6 +13,9 @@
 .ShowCard .ShowSummarySmall{
   margin-bottom: 30px;
 }
+.ShowCard .NoImage img{
+  width: 210px;
+}
 .read-more-button{
   cursor: pointer;
   color: #737386;

@@ -5,7 +5,8 @@ import PlayButton from '../components/PlayButton'
 
 const ShowListItemMob = (props) => (
   <Card className="ShowCard hide-on-large-only hide-on-medium-only"  
-    header={<CardTitle reveal image={props.image.medium} waves='light'/>}
+    header={ props.image === null ? (<CardTitle reveal image='/images/no-image.png' waves='light'/>) : (<CardTitle reveal image={props.image.medium} waves='light' />)
+  } 
     title={props.title}
     reveal={<p className="ShowSummarySmall">
     <ReadMoreReact text={props.text.replace(/<[^>]+>/g, '')}
