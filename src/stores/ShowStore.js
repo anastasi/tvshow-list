@@ -1,4 +1,4 @@
-import { observable, action } from 'mobx';
+import { observable, action } from 'mobx'
 
 class ShowStore {
   @observable shows = [];
@@ -16,4 +16,4 @@ class ShowStore {
 }
 
 const store = new ShowStore();
-export default store;
+export default store

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import './Search.css';
-import ShowList from '../components/ShowList';
-import { inject, observer } from 'mobx-react';
+import React, { Component } from 'react'
+import './Search.css'
+import ShowList from '../components/ShowList'
+import { inject, observer } from 'mobx-react'
 
 
 @inject('ShowStore')
@@ -41,4 +41,4 @@ import { inject, observer } from 'mobx-react';
   }
 }
 
-export default Search;
+export default Search
